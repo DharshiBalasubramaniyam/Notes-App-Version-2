@@ -1,3 +1,7 @@
+# Notes app version 2
+This is the version 2 of the notes app - 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
