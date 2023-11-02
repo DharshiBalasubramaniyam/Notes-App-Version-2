@@ -1,6 +1,13 @@
 # Notes app version 2
-This is the version 2 of the notes app - 
+This is the version 2 of the notes app which I previously done.
 
+The source code of version 1 - https://github.com/DharshiBalasubramaniyam/Notes-App
+
+The demo of the version 1 - https://notes-app-swart-zeta.vercel.app/
+
+In version 1, I have used local storage mechanism for storing notes of user. 
+
+But in version 2, I have used JSON server as api and used axios for to perform HTTP requests in react by following api convensions such as GET, POST, PUT and DELETE.
 
 # Getting Started with Create React App
 
