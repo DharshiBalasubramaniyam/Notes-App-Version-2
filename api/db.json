@@ -1,0 +1,32 @@
+{
+  "notes": [
+    {
+      "id": "ec7b63eb-99af-4838-921b-87e27a6c2b67",
+      "title": "First Note",
+      "description": "This is the brief description of first note. Your can read this and get an clear explanation of this first note.",
+      "date": "Thu Nov 02 2023",
+      "time": "9:01:11 AM"
+    },
+    {
+      "id": "c5c84718-b1fc-465a-ba42-cf50ea3dad67",
+      "title": "Another note",
+      "description": "This is the brief description of an another note. Your can read this and get an clear explanation of this note. ",
+      "date": "Thu Nov 02 2023",
+      "time": "9:01:52 AM"
+    },
+    {
+      "id": "8b2e77b5-68a1-4df5-adeb-50249fd8e3c2",
+      "title": "Next note",
+      "description": "This is the brief description of next note. Your can read this and get an clear explanation of this note.",
+      "date": "Thu Nov 02 2023",
+      "time": "9:02:18 AM"
+    },
+    {
+      "id": "7f8d3535-bd3b-438b-8903-9ad1504ae6b1",
+      "title": "Last note",
+      "description": "This is the brief description of last note. Your can read this and get an clear explanation of this last note",
+      "date": "Thu Nov 02 2023",
+      "time": "9:02:40 AM"
+    }
+  ]
+}

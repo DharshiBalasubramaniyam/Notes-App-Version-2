@@ -1,38 +1,352 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-weight: 400;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--main);
+  color: var(--white);
+}
+
+:root {
+  --main: rgb(129, 129, 255);
+  --white: rgb(255, 255, 255);
+  --btnhover: rgb(234, 234, 234);
+  --light: rgb(224, 224, 255);
+}
+
+header {
+  width: 100%;
+  padding: 8px 75px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: var(--main);
+  box-shadow: 0 1px 5px rgb(211, 211, 211);
+}
+header h1 {
+  font-size: 25px;
+  flex: 1;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+header  img {
+  width: 26px;
+  height: 25px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+header h1 img {
+  margin-top: 4px;
+  margin-right: 7px;
+}
+header img:hover{
+  transform: scale(0.9);
+}
+header .trash,header .edit{
+  height: 22px;
+  width: 22px;
+  margin-left: 15px;
+}
+
+.btn {
+  padding: 10.5px 0;
+  background-color: var(--white);
+  border: none;
+  display: inline-block;
   text-align: center;
+  width: 150px;
+  border-radius: 5px;
+  color: var(--main);
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .search {
+  position: relative;
+  margin-right: 15px;
+  background-color: var(--white);
+  border-radius: 7px;
+}
+header .search input {
+  padding: 10px 15px 10px 40px;
+  width: 430px;
+  font-size: 16.5px;
+  background-color: transparent;
+  color: var(--dark);
+  border: 2px solid var(--light);border-radius: 7px;
+}
+header .search input:focus {
+  box-shadow: 0px 0px 2px var(--main);
+}
+header .search img{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top:6px;
+  left: 5px;
+  padding: 5px;
+}
+.btn:hover, input[type='submit']:hover {
+  box-shadow: 0 0 4px var(--white);
+}
+.btn:active, input[type='submit']:active {
+  transform: scale(0.98);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+section {
+  padding: 90px 75px 20px 75px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
   min-height: 100vh;
+  background-color: var(--white);
+}
+section small {
+  text-align: center;width: 100%;
+}
+.viewnotes {
+  align-items:flex-start;
+}
+section h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+section h2{
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+section > p {
+  width: 100%;
+  margin-top: 20px;
+  text-align: justify;
+  font-size: 17px;
+}
+section .notes-container {
+  margin-top: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 15px;
+}
+section .notes-container .note {
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+section .notes-container .note-link {
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: 0 0 5px var(--main);
+  transition: 0.5s;
+}section .notes-container .note-link:hover {
+  background-color: var(--light);
+}
+
+section .notes-container .note .title {
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: var(--dark);
+}
+section .notes-container .note .description {
+  margin: 10px 0;font-size: 16px;color: black;overflow: hidden;
+}
+section .notes-container p{
+  font-size: 15px;
+  color: var(--light);
+}
+section .empty {
+  text-align: center;
+  margin-top: 200px;
+  width: 100%;
+  font-size: 18px;
+}
+.readmore {
+  color: rgb(69, 12, 255);
+}
+.readmore:hover{
+  color: rgb(41, 0, 175);
+}
+.date-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 9.5px;
+  margin-top: 15px;
+  color: rgb(27, 0, 116);
+  flex: 1;
+}
+section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section form .btns {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 10px;
+}
+section form input{
+  text-transform:capitalize;
+}
+section form input, textarea{
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 17px;
+}
+section form textarea{
+  flex: 1;
+}
+section form input[type='text'] {
+  font-weight: 600;
+  font-size: 20px;
+}
+section .confirm-box {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+section .confirm-box p {
+  margin: 15px 0 25px;
+  font-size: 16px;
+}
+section .confirm-box div {
+  display: flex;
+  justify-content: flex-end;
+}
+section .confirm-box .btn {
+  margin-left: 15px;
+  width: 110px;
+}
+section .confirm-box .cancel {
+  background-color: rgb(236, 236, 236);
+  color: rgb(0, 0, 0);
+}
+section .confirm-box .cancel:hover {
+  background-color: rgb(221, 221, 221);
+  
+}
+section .confirm-box .delete {
+  background-color: red;
+  color: var(--white);
+}
+section .confirm-box .delete:hover {
+  background-color: rgb(216, 0, 0);
+}
+.error {
+  background-color: aqua;
+  width: 100%;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  padding: 10px 3px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 232, 232);
+  color: rgb(237, 0, 0);
+}
+.error span {
+  margin-right: 5px;
+}
+.error .icon {
+  margin-right: 5px;
+  padding: 0 5px;
+  line-height: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.error .icon:hover {
+  background-color: rgb(255, 242, 242);
+}
+.error .error-text {
+  flex: 1;
+}
+/* -----------------------------------------footer styles----------------------------------------------- */
+footer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(154, 154, 154);
+  font-size: 14px;
+  padding: 3px 0;
+}
+footer img {
+  height: 12px;
+  width: 12px;
+  margin: 3px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width:1100px) {
+  section {
+      padding: 70px 20px 0 20px;
   }
-  to {
-    transform: rotate(360deg);
+  header {
+      padding: 8px 20px;
+  }
+}
+@media all and (max-width:900px) {
+  header h1 {
+      font-size: 22px;
+  }
+  header .btn {
+      padding: 7px 0;
+      width: 120px;
+      font-size: 16.5px;
+  }
+  section .notes-container .note .title {
+      font-size: 18px;
+  }
+  section .notes-container .note .description {
+      font-size: 16px;
+  }
+  section .notes-container .note img {
+      height: 24px;
+      width: 24px;
+  }
+  header .search {
+      position: fixed;
+      width: 100%;
+      top: 55px;
+      left: 0;
+      padding: 10px 20px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  header .search input {
+      width: 100%;
+  }
+  header .search img{
+      left: 25px;
+      top: 15px;
+  }
+  #list {
+      padding: 125px 20px 15px;
+  }
+  section form input[type='submit'] {
+      padding: 10px 0;
+      width: 80px;
+  }
+  footer {
+      font-size: 11px;
   }
 }
