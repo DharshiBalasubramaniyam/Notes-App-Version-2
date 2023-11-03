@@ -5,9 +5,9 @@ The source code of version 1 - https://github.com/DharshiBalasubramaniyam/Notes-
 
 The demo of the version 1 - https://notes-app-swart-zeta.vercel.app/
 
-In version 1, I have used local storage mechanism for storing notes of user. 
+In version 1, I have used local storage mechanism for storing notes of the user. 
 
-But in version 2, I have used JSON server as api and used axios for to perform HTTP requests in react by following api convensions such as GET, POST, PUT and DELETE.
+But in version 2, I have used JSON server as api and used axios to perform HTTP requests in react, by following api convensions such as GET, POST, PUT and DELETE.
 
 # Getting Started with Create React App
 
